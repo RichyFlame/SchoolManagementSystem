@@ -4,18 +4,28 @@ public class Curso {
     private int id;
     private String nombre;
     private String descripcion;
-    private byte numeroDeCreditos;
-    private byte version;
+    private int numeroDeCreditos;
+    private int version;
 
     public Curso() {
     }
 
-    public Curso(int id, String nombre, String descripcion, byte numeroDeCreditos, byte version) {
+    public Curso(int id, String nombre, String descripcion, int numeroDeCreditos, int version) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.numeroDeCreditos = numeroDeCreditos;
         this.version = version;
+    }
+
+    @Override
+    public String toString() {
+        return "CURSO " +
+                "\n ID: " + id +
+                "\n NOMBRE: " + nombre +
+                "\n DESCRIPCION: " + descripcion +
+                "\n CREDITOS: " + numeroDeCreditos +
+                "\n VERSION: " + version;
     }
 
     public int getId() {
@@ -42,19 +52,19 @@ public class Curso {
         this.descripcion = descripcion;
     }
 
-    public byte getNumeroDeCreditos() {
+    public int getNumeroDeCreditos() {
         return numeroDeCreditos;
     }
 
-    public void setNumeroDeCreditos(byte numeroDeCreditos) {
+    public void setNumeroDeCreditos(int numeroDeCreditos) {
         this.numeroDeCreditos = numeroDeCreditos;
     }
 
-    public byte getVersion() {
+    public int getVersion() {
         return version;
     }
 
-    public void setVersion(byte version) {
+    public void setVersion(int version) {
         this.version = version;
     }
 }
